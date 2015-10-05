@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /doc/examples/basic</title>
+ </head>
+ <body>
+<h1>Index of /doc/examples/basic</h1>
+<table><tr><th><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr><tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[DIR]"></td><td><a href="/doc/examples/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="chirp2.ck">chirp2.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">1.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="larry++.ck">larry++.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="moe++.ck">moe++.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="chirp.ck">chirp.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">885 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="rec-auto-stereo.ck">rec-auto-stereo.ck</a></td><td align="right">06-Sep-2012 04:42  </td><td align="right">858 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="rec-auto.ck">rec-auto.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">827 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="unchuck.ck">unchuck.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">752 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="fmsynth.ck">fmsynth.ck</a></td><td align="right">18-Sep-2006 20:53  </td><td align="right">719 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="wind2.ck">wind2.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">715 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="demo2.ck">demo2.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">714 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="rec.ck">rec.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">653 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="foo2.ck">foo2.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">642 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="moe.ck">moe.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">574 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="curly.ck">curly.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">574 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="larry.ck">larry.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">573 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="blit2.ck">blit2.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">521 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="valueat.ck">valueat.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">483 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="curly++.ck">curly++.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">477 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="whole.ck">whole.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">472 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ring.ck">ring.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">469 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="adsr.ck">adsr.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">462 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="blit.ck">blit.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">452 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="envelope.ck">envelope.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">440 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="alarm.ck">alarm.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">431 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="wind.ck">wind.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">416 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="func.ck">func.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">414 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="comb.ck">comb.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">407 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="demo3.ck">demo3.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">383 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="fm.ck">fm.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">358 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="infnan.ck">infnan.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">340 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="sndbuf.ck">sndbuf.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">331 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="fm3.ck">fm3.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">323 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="i-robot.ck">i-robot.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">314 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="fm2.ck">fm2.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">309 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="imp.ck">imp.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">303 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="bar.ck">bar.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">303 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="foo.ck">foo.ck</a></td><td align="right">06-Sep-2012 04:43  </td><td align="right">301 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="whirl.ck">whirl.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">290 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="echo.ck">echo.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">287 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="zerox.ck">zerox.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">250 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="tick2.ck">tick2.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">235 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="args.ck">args.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">230 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="lfo.ck">lfo.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">203 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="demo1.ck">demo1.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">177 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="step.ck">step.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">172 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="demo0.ck">demo0.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">159 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="delay.ck">delay.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">159 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="tick.ck">tick.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">153 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="adc.ck">adc.ck</a></td><td align="right">16-Jul-2008 06:45  </td><td align="right">130 </td><td>&nbsp;</td></tr>
+<tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.2.15 (Red Hat) Server at chuck.cs.princeton.edu Port 80</address>
+</body></html>
