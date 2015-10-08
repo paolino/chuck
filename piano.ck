@@ -1,71 +1,9 @@
 MidiIn min;
+MidiOut mout;
 
 // open midi receiver, exit on fail
-if ( !min.open(Std.atoi(me.arg(0))) ) me.exit(); 
-
-
-fun void playNote (Event off,int note,int vel,float control[]){
-    Wurley f =>  dac;
-    Rhodey g =>  dac;
-    float v;
-    control[74] => f.controlOne => g.controlOne; 
-    control[71] => f.controlTwo => g.controlTwo;
-    note => Std.mtof => f.freq;
-    note => Std.mtof => v;
-    v*(1+control[97]*0.1) => g.freq;
-    vel => v;
-    v/200 => f.noteOn;
-    v/200 => g.noteOn;
-    off => now;
-    1 => f.noteOff ;
-    1 => g.noteOff;
-    1::second => now;
-    f =< dac;
-    g =< dac;
-    }
-
-fun void midi (){
-
-  Event noteOn[128];
-  float control[128];
-
-  MidiMsg msg;
-  while( true )
-  {
-      // wait on midi event
-      min => now;
-
-      // receive midimsg(s)
-      while( min.recv( msg ) )
-      {
-          msg.data1 <<4 => int chan; 
-          msg.data1 >> 4 => int command;
-          if (command == 8){ // noteOff;
-              if (noteOn[msg.data2] != null)
-                  noteOn[msg.data2].signal();
-              null => noteOn[msg.data2];
-              }
-          if (command == 9){ // noteOn;
-              if (noteOn[msg.data2] != null)
-                  noteOn[msg.data2].signal();
-              Event off;
-              off @=> noteOn[msg.data2];
-              spork ~ playNote(off,msg.data2,msg.data3,control);
-              }
-          if (command == 11){ // CC
-              msg.data3  => float v;
-              v/128 => control[msg.data2];
-              <<< "CC", msg.data2, v >>>;
-              }
-
-          
-          // print content
-          <<< msg.data1 >> 4, msg.data2, msg.data3 >>>;
-      }
-  }
-  }
-
-
+if ( !min.open(0) ) me.exit(); 
+if ( !mout.open(0) ) me.exit(); 
 //spork ~ midi();
 
 
@@ -78,70 +16,114 @@ dur evt[m];
 time t0;
 time over;
 
+
+
+t0 + 8::second => over;
+
 fun void reset (){
+  SinOsc s=> ADSR e => dac;
+  0.3=> s.gain;
+  (2::ms,50::ms,0,0::ms) => e.set;
+  0 => int i;
   while(true){
-    0 => i;
-    0 => j;
-    now => t0;
-    t0 + 2::second => over;
-    2::second => now;
-    <<<"reset","">>>;
+  if(now < over){
+    if(i%4 == 0) 
+      1760 => s.sfreq;
+    else 
+      880 => s.sfreq;
+    1 => e.keyOn;
     }
+  i++;
+  0.5::second => now;
+  
+  
   }
-    
+  
+}
+float controls[128];
 fun void recordmidi(){
+  now => t0;
   while (true) {
       MidiMsg msg;
       min => now;
-      // receive midimsg(s)
-      while( min.recv( msg ) ){
-        now - t0 => evt[i];
-        msg @=> msgs[i];
-        i++ ;
-        <<<i,evt[i]>>>;
+      if (now < over)
+        while( min.recv( msg ) ){
+          now - t0 => evt[i];
+          msg @=> msgs[i];
+          <<<i,evt[i]>>>;
+          i++ ;
+          }
+      else{  
+        while( min.recv( msg ) ){
+            msg.data1 >> 4 => int command;
+          if (command == 11){ // CC
+              msg.data3  => float v;
+              v/128 => controls[msg.data2];
+              <<< "CC", msg.data2, v >>>;
+              }
+            }
         }
       }
   }
 
+int queue[5];
 Event noteOn[128];
-float control[128];
-fun void playmidi(){
-  while (true) {
-      evt[j] + t0 => time next;
-      //<<<j,now,evt[j],t0,next,over>>>;
-      if(next > now && next < over){
-          next => now ;
-          <<<j>>>;
-          msgs[j] @=> MidiMsg msg;
-          msg.data1 <<4 => int chan; 
-          msg.data1 >> 4 => int command;
-          if (command == 8){ // noteOff;
-              if (noteOn[msg.data2] != null)
-                  noteOn[msg.data2].signal();
-              null => noteOn[msg.data2];
-              }
-          if (command == 9){ // noteOn;
-              if (noteOn[msg.data2] != null)
-                  noteOn[msg.data2].signal();
-              Event off;
-              off @=> noteOn[msg.data2];
-              spork ~ playNote(off,msg.data2,msg.data3,control);
-              }
-          if (command == 11){ // CC
-              msg.data3  => float v;
-              v/128 => control[msg.data2];
-              <<< "CC", msg.data2, v >>>;
-              }
-          j++;
-          }
-      else 1000::ms => now;
-        
-      }
+  
+0 => int iq;
+
+fun dur quant(dur a,dur w,int sub){
+  (a/w*sub + 0.5) $ int => int k;
+  return k*w/sub;
+  }
+// evaluate e waiting time for events of a repeated sequence
+fun dur wait(int ne,dur w,int n){
+  evt[n%ne] + w * (n / ne) => dur a;
+  return a; 
   }
 
+fun void stopat(dur t,int flag[]){
+    while(true){
+      t => now;
+      1 => flag[0];
+      }
+    }
+fun void playmidi(dur maxw,int cc) {
+  
+  maxw => now; // wait for record notes to end;
+  now => time tb;
+  for (0 => int l;l<4;l++){
+    1 => controls[cc + 2 * l];
+    0.2 => controls[cc+1 + 2 *l];
+    }
+  maxw/16 => dur width;
+  int flag[1];
+  spork ~ stopat(width,flag);
+  while(true){
+      <<<"d">>>;
+      for (0 => int l;l<4;l++){
+        0 => int n;
+        <<<"c">>>;
+        now => time t0;
+        0 => flag[0];
+        while(!flag[0]){
+            controls[cc + 2*l] * maxw => dur shift;
+            1/(2*controls[cc+1+2*l] + 0.1) => float speed;
+            quant(wait(i,maxw,n)*speed-shift,maxw,64) => dur w;
+            if(w + t0 <= now){
+              n++; // try next event;
+              continue;
+              }
+            w + t0 => now;
+            mout.send(msgs[(n++)%i]);
+            }
+          }
+      }
+  }
 spork ~ reset();
 spork ~ recordmidi();
-spork ~ playmidi();
+spork ~ playmidi(8::second,81);
+//spork ~ playmidi(8::second,89);
+//spork ~ playmidi(8::second,97);
   //playmidi();
 while (true){
   100::ms => now;
