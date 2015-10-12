@@ -34,7 +34,7 @@ fun void reset (){
     1 => e.keyOn;
     }
   i++;
-  0.5::second => now;
+  (0.5*15/16)::second => now;
   
   
   }
@@ -81,13 +81,25 @@ fun dur wait(int ne,dur w,int n){
   return a; 
   }
 
-fun void stopat(dur t,int flag[]){
+int flag[3];
+fun void stopat(dur t){
     while(true){
       t => now;
       1 => flag[0];
+      1 => flag[1];
+      1 => flag[2];
       }
     }
-fun void playmidi(dur maxw,int cc) {
+
+fun void noteoff(int note){
+  MidiMsg msg;
+  (2*15/16)::second => now;
+  0 => msg.data3;
+  note => msg.data2;
+  8 << 4 => msg.data1;
+  mout.send(msg);
+  }
+fun void playmidi(dur maxw,int cc,int h) {
   
   maxw => now; // wait for record notes to end;
   now => time tb;
@@ -95,17 +107,14 @@ fun void playmidi(dur maxw,int cc) {
     1 => controls[cc + 2 * l];
     0.2 => controls[cc+1 + 2 *l];
     }
-  maxw/16 => dur width;
-  int flag[1];
-  spork ~ stopat(width,flag);
   while(true){
       <<<"d">>>;
       for (0 => int l;l<4;l++){
         0 => int n;
         <<<"c">>>;
         now => time t0;
-        0 => flag[0];
-        while(!flag[0]){
+        0 => flag[h];
+        while(!flag[h]){
             controls[cc + 2*l] * maxw => dur shift;
             1/(2*controls[cc+1+2*l] + 0.1) => float speed;
             quant(wait(i,maxw,n)*speed-shift,maxw,64) => dur w;
@@ -114,16 +123,21 @@ fun void playmidi(dur maxw,int cc) {
               continue;
               }
             w + t0 => now;
+            if(msgs[n%i].data1 >> 4 == 9);
+              spork ~ noteoff(msgs[n%i].data2);
             mout.send(msgs[(n++)%i]);
+            
             }
           }
       }
   }
+(15.0/64)::second => dur d;
+spork ~ stopat(d);
 spork ~ reset();
 spork ~ recordmidi();
-spork ~ playmidi(8::second,81);
-//spork ~ playmidi(8::second,89);
-//spork ~ playmidi(8::second,97);
+spork ~ playmidi((8.0*15/16)::second,81,0);
+//spork ~ playmidi((8.0*15/16)::second,89,1);
+//spork ~ playmidi(8::second,97,2);
   //playmidi();
 while (true){
   100::ms => now;
