@@ -18,7 +18,7 @@ time over;
 
 
 
-t0 + 8::second => over;
+t0 + 4::second => over;
 
 fun void reset (){
   SinOsc s=> ADSR e => dac;
@@ -131,11 +131,11 @@ fun void playmidi(dur maxw,int cc,int h) {
           }
       }
   }
-(15.0/64)::second => dur d;
+(15.0/16)::second => dur d;
 spork ~ stopat(d);
 spork ~ reset();
 spork ~ recordmidi();
-spork ~ playmidi((8.0*15/16)::second,81,0);
+spork ~ playmidi((4*15/16)::second,81,0);
 //spork ~ playmidi((8.0*15/16)::second,89,1);
 //spork ~ playmidi(8::second,97,2);
   //playmidi();
